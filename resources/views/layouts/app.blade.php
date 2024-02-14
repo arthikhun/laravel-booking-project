@@ -34,8 +34,8 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <i class="fa-solid fa-image"></i>
-                Navbar
+                <i class="fa-solid fa-store"></i>
+                ร้านกินดีมีเฮง
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" datwa-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,22 +44,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">หน้าแรก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section1">Features</a>
+                        <a class="nav-link" href="#intro">ข้อมูลร้าน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section2">Pricing</a>
+                        <a class="nav-link" href="#section2">เมนู</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true" href="#section3">Disabled</a>
+                        <a class="nav-link" href="#section3">จองโต๊ะ</a>
                     </li>
                 </ul>
+                <div class="ms-auto">
+                    <a class="nav-link" href="/counter">หน้าเค้าเตอร์</a>
+                </div>
             </div>
         </div>
     </nav>
-    @yield('content')
+    <div style="padding-top:3.55rem">
+        @yield('content')
+    </div>
 
     <script>
         var scrollSpy = new bootstrap.ScrollSpy(document.body, {
