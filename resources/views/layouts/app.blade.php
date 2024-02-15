@@ -25,13 +25,27 @@
     {{-- MDB --}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
 
+    {{-- jquery ui --}}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    {{-- time picker --}}
+    <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet" />
+
+
     <link rel="stylesheet" href="{{ asset('assets/fontawesome-free-6.5.1-web/css/all.min.css') }}">
     <title>@yield('title')</title>
+    <style>
+        .form-floating>label {
+            z-index: 1;
+        }
+    </style>
     @yield('head')
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    {{-- <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <i class="fa-solid fa-store"></i>
@@ -61,7 +75,48 @@
                 </div>
             </div>
         </div>
+    </nav> --}}
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-store"></i>
+                ร้านกินดีมีเฮง
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">ข้อมูลร้าน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">เมนู</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">จองโต๊ะ</a>
+                    </li>
+
+                </ul>
+                <div class="ms-auto">
+                    <a class="nav-link" href="/counter">หน้าเค้าเตอร์</a>
+                </div>
+                {{-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> --}}
+            </div>
+        </div>
     </nav>
+
     <div style="padding-top:3.55rem">
         @yield('content')
     </div>

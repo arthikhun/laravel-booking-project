@@ -12,4 +12,8 @@ class Booking extends Model
     public $timestamps = false;
     public $incrementing = false;
     protected $fillable = ['cus_name', 'cus_phone', 'cus_amt', 'checkin_date', 'booking_date'];
+    public function mapTable()
+    {
+        return $this->hasMany('App\Models\Booking_map_table', 'booking_id', 'id');
+    }
 }

@@ -19,3 +19,5 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/counter', [HomeController::class, 'counter']);
+Route::post('/booking', [HomeController::class, 'booking']);
