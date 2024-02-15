@@ -350,7 +350,7 @@
                             // Handle success, if needed
                             // $("#error").html(error);
                             // console.log(response);
-                            // location.href = '{{ url('/counter') }}';
+                            location.href = '{{ url('/counter') }}';
                         },
                         error: function(error) {
                             // Handle error, if needed

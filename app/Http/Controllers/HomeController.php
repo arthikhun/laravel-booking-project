@@ -25,6 +25,7 @@ class HomeController extends Controller
 
     public function booking(Request $request)
     {
+        return 'hi';
         // $datetime = $request->input('data.checkInDate') . ' ' . $request->input('data.checkInTime');
         $booking = new Booking();
         $booking->cus_name = $request->input('data.cusName');
